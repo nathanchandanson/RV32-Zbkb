@@ -5,7 +5,6 @@ module alu #(
     input  logic [XLEN-1:0]        opa_i,
     input  logic [XLEN-1:0]        opb_i,
 
-    // output logic              valid_o,
     output logic [XLEN-1:0]        res_o
 );
 

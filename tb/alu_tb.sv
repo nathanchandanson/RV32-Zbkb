@@ -1,9 +1,3 @@
-//=============================================================
-// Testbench: tb_alu
-// DUT       : alu (rv32_zbkb_pkg)
-// Purpose   : Self-checking testbench (reference model + 
-//             directed + randomized tests) for the Zbkb ALU
-//=============================================================
 // NOTE: This testbench was written using AI
 
 `timescale 1ns/1ps

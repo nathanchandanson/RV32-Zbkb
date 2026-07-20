@@ -1,3 +1,4 @@
+/* verilator lint_off UNUSEDSIGNAL */
 package rv32_zbkb_pkg;
 
 typedef enum logic [3:0] {
@@ -17,3 +18,4 @@ typedef enum logic [3:0] {
 } op_e;
 
 endpackage
+/* verilator lint_on UNUSEDSIGNAL */
