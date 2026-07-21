@@ -6,15 +6,18 @@ module rv32_zbkb_top #(
     input  logic [XLEN-1:0] rega_i,
     input  logic [XLEN-1:0] regb_i,
 
-    output logic [XLEN-1:0] res_o
+    output logic [XLEN-1:0] res_o,
+    output logic            unknown_instr_o
 );
 
     rv32_zbkb_pkg::op_e op_o_dec;
     logic [XLEN-1:0]    opa_o_dec, opb_o_dec;
 
+    assign unknown_instr_o = (op_o_dec == rv32_zbkb_pkg::OP_UNKNOWN);
+
     rv32_zbkb_decoder #(
-        .XLEN,
-        .ILEN
+        .XLEN(XLEN),
+        .ILEN(ILEN)
     ) i_dec (
         .instr_i,
         .rega_i,
@@ -25,7 +28,7 @@ module rv32_zbkb_top #(
     );
 
     rv32_zbkb_alu #(
-        .XLEN
+        .XLEN(XLEN)
     ) i_alu (
         .op_i(op_o_dec),
         .opa_i(opa_o_dec),
