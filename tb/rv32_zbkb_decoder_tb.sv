@@ -3,7 +3,7 @@
 `timescale 1ns/1ps
 
 /* verilator lint_off UNUSEDSIGNAL */
-module decoder_tb;
+module rv32_zbkb_decoder_tb;
 
     import rv32_zbkb_pkg::*;
 
@@ -18,7 +18,7 @@ module decoder_tb;
     int errors = 0;
     int checks = 0;
 
-    decoder #(
+    rv32_zbkb_decoder #(
         .XLEN(XLEN),
         .ILEN(ILEN)
     ) dut (

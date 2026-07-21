@@ -1,4 +1,4 @@
-module decoder #(
+module rv32_zbkb_decoder #(
     parameter int XLEN = 32,
     parameter int ILEN = 32
 ) (

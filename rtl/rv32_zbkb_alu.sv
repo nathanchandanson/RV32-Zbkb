@@ -1,4 +1,4 @@
-module alu #(
+module rv32_zbkb_alu #(
     parameter int XLEN = 32
 ) (
     input  rv32_zbkb_pkg::op_e     op_i,

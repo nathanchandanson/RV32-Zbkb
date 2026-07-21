@@ -5,7 +5,7 @@
 import rv32_zbkb_pkg::*;
 
 /* verilator lint_off UNUSEDSIGNAL */
-module alu_tb;
+module rv32_zbkb_alu_tb;
 
     //-----------------------------------------------------------
     // Parameters / DUT signals
@@ -23,7 +23,7 @@ module alu_tb;
     //-----------------------------------------------------------
     // DUT instantiation
     //-----------------------------------------------------------
-    alu #(
+    rv32_zbkb_alu #(
         .XLEN(XLEN)
     ) dut (
         .op_i   (op_i),
